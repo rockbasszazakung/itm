@@ -12,7 +12,9 @@ import Activities from './componets/Activities/Activities';
 import ActivitiesPublicze from './componets/Activities/ActivitiesPublicze';
 import Activitiescreate from './componets/Activities/Activitiescreate';
 import Activitiesupdate from './componets/Activities/Activitiesupdate';
-
+import Publicizeuser from './componets/Publicize/Publicizeuser';
+import Publiczecreate from './componets/Publicize/Publiczecreate';
+import Publiczeupdate from './componets/Publicize/Publiczeupdate';
 
 
 export default class App extends Component{
@@ -40,7 +42,10 @@ export default class App extends Component{
       <Route path="/Activities"  component={Activities} />   
       <Route path="/ActivitiesPublicze"  component={ActivitiesPublicze} />   
       <Route path="/Activitiescreate"  component={Activitiescreate} /> 
-      <Route path="/Activitiesupdate" component={Activitiesupdate} />
+      <Route path="/Activitiesupdate/:activities_id" component={Activitiesupdate} />
+      <Route path="/Publicizeuser" component={Publicizeuser} />
+      <Route path="/Publiczecreate" component={Publiczecreate} />
+      <Route path="/Publiczeupdate/:public_id" Component={Publiczeupdate} />
       <Route exact path="/Admin"  component={Admin} /> 
       <Footer></Footer>
     </BrowserRouter>

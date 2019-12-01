@@ -8,16 +8,16 @@ export default class Navbar extends Component {
     
     render(){
         return(
-            <div>
-                <nav class="navbar navbar-expand-sm bg-company-purple  fixed-top py-3" id="mainNav">
-                    <div className="container">
-                    <Link to="/">
-                    <img src="2.png" width="50" height="60" class="navbar-brand js-scroll-trigger" />
-                        <a className="navbar-brand js-scroll-trigger" href="#page-top"><font color="White"><h6>การเเข่งขันทักษะทางคอมพิวเตอร์</h6></font></a></Link>
-                            <NavbarLink />
-                    </div>
-                </nav>
-                <LoginModal />
+             <div>
+            {/* //     <nav class="navbar navbar-expand-sm bg-company-purple  fixed-top py-3" id="mainNav">
+            //         <div className="container">
+            //         <Link to="/">
+            //         <img src="2.png" width="50" height="60" class="navbar-brand js-scroll-trigger" />
+            //             <a className="navbar-brand js-scroll-trigger" href="#page-top"><font color="White"><h6>การเเข่งขันทักษะทางคอมพิวเตอร์</h6></font></a></Link>
+            //                 <NavbarLink />
+            //         </div>
+            //     </nav> */}
+                 
                 {/* <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a class="navbar-brand" href="#">Carousel</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,6 +41,22 @@ export default class Navbar extends Component {
               </form>
             </div>
           </nav> */}
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light" >
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+      <NavbarLink />
+      <LoginModal />
+    </ul>
+    {/* <!-- Right navbar links --> */}
+  </nav> 
             </div>
         )
     }

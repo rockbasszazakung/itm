@@ -1,5 +1,6 @@
 import React, {Component } from 'react';
 import axios from 'axios';
+import Container from 'react-bootstrap/Container'
 export default class Activitiescreate extends Component {
     
       state = {
@@ -64,32 +65,28 @@ export default class Activitiescreate extends Component {
             // </div>
             // </div>
             <div>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <form onSubmit={this.handleSubmit}>
-                <div class="form-group">
-                        <label for="activities_name" type="text" class="col-form-label">ชื่อกิจกรรม :</label>
-                        <input type="text" class="form-control" name="activities_name" id="activities_name" value={this.state.activities_name} onChange={this.handleChange}/>
-                    </div>
-                    <div class="form-group">
-                        <label for="activities_detail" type="text" class="col-form-label">รายละเอียด :</label>
-                        <input type="text" class="form-control" name="activities_detail" id="activities_detail" value={this.state.activities_detail} onChange={this.handleChange}/>
-                    </div>
-                    <div class="form-group">
-                        <label for="start_date" type="text" class="col-form-label">วันเริ่ม :</label>
-                        <input type="text" class="form-control" name="start_date" id="start_date" value={this.state.start_date} onChange={this.handleChange}/>
-                    </div>
-                    <div class="form-group">
-                        <label for="start_date" type="text" class="col-form-label">วันสิ้นสุด :</label>
-                        <input type="text" class="form-control" name="end_date" id="end_date" value={this.state.end_date} onChange={this.handleChange}/>
-                    </div>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary"onClick={ this.handleChange }>Send message</button>
+                <Container>
+                    <form onSubmit={this.handleSubmit}>
+                        <div class="form-group">
+                            <label for="activities_name" type="text" class="col-form-label">ชื่อกิจกรรม :</label>
+                            <input type="text" class="form-control" name="activities_name" id="activities_name" value={this.state.activities_name} onChange={this.handleChange}/>
+                        </div>
+                        <div class="form-group">
+                            <label for="activities_detail" type="text" class="col-form-label">รายละเอียด :</label>
+                            <input type="text" class="form-control" name="activities_detail" id="activities_detail" value={this.state.activities_detail} onChange={this.handleChange}/>
+                        </div>
+                        <div class="form-group">
+                            <label for="start_date" type="text" class="col-form-label">วันเริ่ม :</label>
+                            <input type="text" class="form-control" name="start_date" id="start_date" value={this.state.start_date} onChange={this.handleChange}/>
+                        </div>
+                        <div class="form-group">
+                            <label for="start_date" type="text" class="col-form-label">วันสิ้นสุด :</label>
+                            <input type="text" class="form-control" name="end_date" id="end_date" value={this.state.end_date} onChange={this.handleChange}/>
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary"onClick={ this.handleChange }>Send message</button>
                     </form>
+                </Container>
             </div>
         )
     }

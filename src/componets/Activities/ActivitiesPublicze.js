@@ -1,6 +1,7 @@
 import React, {Component } from 'react';
 import axios from 'axios';
 import Moment from 'react-moment';
+import Container from 'react-bootstrap/Container'
 export default class ActivitiesPublicze extends Component {
     state={
         responses : []            
@@ -20,13 +21,10 @@ componentDidMount(){
 
         return(
             <div>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12" >
-                        <br /> 
-                        <br /> 
-                        <br /> 
-                        <br /> 
+                <Container>
+                <div>
+                    <div>
+                        <div > 
                         <table class="table table-striped">
                             <thead>
                                 <tr><th scope="col">ลำดับ</th>
@@ -52,6 +50,7 @@ componentDidMount(){
                         </div>
                     </div>
                 </div>
+                </Container>
             </div>
         )
     }
