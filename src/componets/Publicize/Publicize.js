@@ -23,18 +23,6 @@ RefreshPage=()=> {
     window.location.href = 'http://localhost:3000/Activities'; 
 }
 
-NextPage=(activities_id)=> { 
-    window.location.href ='http://localhost:3000/Activitiesupdate/'+activities_id; 
-}
-
-
-handleUpdate = (activities_id) => {
-
-        this.NextPage(activities_id);
-        // .catch((err) => {
-        //     console.log(err);
-        // })
-}
 
 handleChange = (event) => {
     let nam = event.target.name;
@@ -77,7 +65,7 @@ render(){
     return(
         <div>
             <Container>
-
+            <h2>ประชาสัมพันธ์</h2>
             {/* <form class="form-inline my-2 my-lg-0 float-right">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="keyword" value={this.state.keyword} onChange={this.handleChange}>Search</button>&nbsp;&nbsp;&nbsp;
@@ -90,7 +78,7 @@ render(){
                 <thead>
                     <tr>
                     <th scope="col">ลำดับ</th>
-                        <th scope="col">หัวข้อประชาสัมพัน</th>
+                        <th scope="col">หัวข้อประชาสัมพันธ์</th>
                         <th scope="col">รายละเอียด</th>
                         {/* <th scope="col">เเก้ไขกิจกรรม ลบกิจกรรม</th> */}
                     </tr>

@@ -14,7 +14,9 @@ import Activitiescreate from './componets/Activities/Activitiescreate';
 import Activitiesupdate from './componets/Activities/Activitiesupdate';
 import Publicizeuser from './componets/Publicize/Publicizeuser';
 import Publiczecreate from './componets/Publicize/Publiczecreate';
-import Publiczeupdate from './componets/Publicize/Publiczeupdate';
+import Updatepublicze from './componets/Publicize/Updatepublicze';
+import Activities_register from './componets/Activities/Activities_register';
+import Show_activities from './componets/Show_activities/Show_activities';
 
 
 export default class App extends Component{
@@ -35,7 +37,9 @@ export default class App extends Component{
   return (
     <BrowserRouter>
       <Navbar></Navbar>
-      
+      <br />
+      <br />
+      <br />
       <Header></Header>
       <Route exact path="/" component={Home} />
       <Route path="/Publicize"  component={Publicize} />   
@@ -45,7 +49,9 @@ export default class App extends Component{
       <Route path="/Activitiesupdate/:activities_id" component={Activitiesupdate} />
       <Route path="/Publicizeuser" component={Publicizeuser} />
       <Route path="/Publiczecreate" component={Publiczecreate} />
-      <Route path="/Publiczeupdate/:public_id" Component={Publiczeupdate} />
+      <Route path="/Show_activities" component={Show_activities} />
+      <Route path="/Updatepublicze/:public_id" component={Updatepublicze} />
+      <Route path="/Activities_register/:activities_id" component={Activities_register} />
       <Route exact path="/Admin"  component={Admin} /> 
       <Footer></Footer>
     </BrowserRouter>

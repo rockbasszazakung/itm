@@ -1,6 +1,7 @@
 import React, {Component } from 'react';
 import axios from 'axios';
 import Moment from 'react-moment';
+import {Link} from "react-router-dom";
 import Container from 'react-bootstrap/Container'
 export default class ActivitiesPublicze extends Component {
     state={
@@ -22,6 +23,7 @@ componentDidMount(){
         return(
             <div>
                 <Container>
+                <h2>กิจกรรม</h2>
                 <div>
                     <div>
                         <div > 
@@ -43,6 +45,7 @@ componentDidMount(){
                                         <td>{response.activities_detail}</td>
                                         <td><Moment format="DD-MM-YYYY">{response.start_date}</Moment></td>
                                         <td><Moment format="DD-MM-YYYY">{response.end_date}</Moment></td>
+                                        <td><Link to={'/Activities_register/'+response.activities_id}><button type="button" class="btn btn-outline-success">สมัครกิจกรรม</button></Link></td>
                                     </tr>
                                 ))}
                                 </tbody>

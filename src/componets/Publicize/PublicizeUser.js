@@ -77,7 +77,7 @@ render(){
     return(
         <div>
             <Container>
-
+            <h2>ประชาสัมพันธ์</h2>
             <form class="form-inline my-2 my-lg-0 float-right">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="keyword" value={this.state.keyword} onChange={this.handleChange}>Search</button>&nbsp;&nbsp;&nbsp;
@@ -100,11 +100,11 @@ render(){
                             <td>{response.topic}</td>
                             <td>{response.content}</td>
                             <td>
-                                    <Link to={'/Publiczeupdate'}>
+                                    <Link to={'/Updatepublicze/'+response.public_id}>
                                     <button type="button" class="btn btn-outline-primary">เเก้ไข</button> 
                                     </Link>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                                     <button type="button" class="btn btn-outline-danger" onClick={() => this.handleRemove(response.public_id)}>ลบ</button>
-                                </td>
+                            </td>
                         </tr>
                     ))}
                     </tbody>
